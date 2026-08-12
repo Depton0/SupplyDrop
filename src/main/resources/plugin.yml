@@ -1,0 +1,16 @@
+name: SupplyDrop
+version: 1.0.0
+main: com.depton.supplydrop.SupplyDropPlugin
+api-version: '1.21'
+author: Depton
+description: Random supply drops with falling visuals and custom loot.
+commands:
+  supplydrop:
+    description: Main command for SupplyDrop plugin.
+    aliases: [sd, supply]
+    permission: supplydrop.admin
+    usage: /<command> [start|stop|reload|tp]
+permissions:
+  supplydrop.admin:
+    description: Allows administrative actions for SupplyDrop.
+    default: op

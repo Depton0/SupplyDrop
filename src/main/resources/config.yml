@@ -1,0 +1,101 @@
+# SupplyDrop Configuration
+
+settings:
+  world: "world"
+  bounding-box:
+    x1: -1000
+    z1: -1000
+    x2: 1000
+    z2: 1000
+  height-above-surface: 60
+  fall-speed: 0.35
+  despawn-seconds: 600
+  crate-block: "BARREL"
+  parachute-block: "RED_WOOL"
+  auto-drop:
+    enabled: true
+    interval-seconds: 1800
+
+sounds:
+  falling: "ENTITY_WIND_CHARGE_WIND_BURST"
+  landing: "ENTITY_GENERIC_EXPLODE"
+  claim: "UI_STONECUTTER_TAKE_RESULT"
+
+particles:
+  falling: "FLAME"
+  landing: "EXPLOSION"
+
+messages:
+  prefix: "&8[&bSupplyDrop&8] "
+  drop-start: "&eA supply drop is falling at &aX: %x%, Y: %y%, Z: %z% &ein &b%world%&e!"
+  drop-land: "&aThe supply drop has landed at &eX: %x%, Y: %y%, Z: %z%&a! Go claim it!"
+  drop-looted: "&b%player% &ehas claimed the supply drop at &aX: %x%, Y: %y%, Z: %z%&e!"
+  drop-despawned: "&cThe unclaimed supply drop at X: %x%, Y: %y%, Z: %z% has expired."
+  already-active: "&cA supply drop event is already active!"
+  no-active-drop: "&cThere is no active supply drop right now."
+  no-permission: "&cYou do not have permission to use this command."
+  reloaded: "&aSupplyDrop configuration reloaded successfully!"
+  stopped: "&cActive supply drop has been cancelled."
+
+loot-settings:
+  min-items: 3
+  max-items: 7
+
+loot:
+  - weight: 10
+    min-amount: 1
+    max-amount: 3
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3953
+      type: NETHERITE_INGOT
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"text":"netherite from depton"}'
+  - weight: 50
+    min-amount: 3
+    max-amount: 10
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3953
+      type: DIAMOND
+  - weight: 30
+    min-amount: 2
+    max-amount: 6
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3953
+      type: GOLDEN_APPLE
+  - weight: 5
+    min-amount: 1
+    max-amount: 1
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3953
+      type: ENCHANTED_GOLDEN_APPLE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"text":"depton apple"}'
+  - weight: 15
+    min-amount: 1
+    max-amount: 1
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3953
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"text":"depton sword"}'
+        enchants:
+          DAMAGE_ALL: 5
+          DURABILITY: 3
+  - weight: 80
+    min-amount: 16
+    max-amount: 32
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3953
+      type: EXPERIENCE_BOTTLE
